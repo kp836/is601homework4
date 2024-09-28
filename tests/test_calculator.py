@@ -19,3 +19,4 @@ def test_divide():  # Division Test
 def test_multiply():  # Multiplication Test
     """Multiplication Test"""
     assert Calculator.multiply(Decimal('2'), Decimal('2')) == Decimal('4')  # Confirm
+    
