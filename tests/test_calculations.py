@@ -46,4 +46,5 @@ def test_find_by_operation(setup_calculations):
 def test_get_latest_with_empty_history():
     """Latest calculation history with an empty history"""
     Calculations.clear_history() # Confirm if the history clears by itself
-    assert Calculations.get_latest() is None, "Expected None for latest calculation with empty history" # Confirm that the newest calculation is None because the history is empt
+    assert Calculations.get_latest() is None, "Expected None for latest calculation with empty history" # Confirm that the newest calculation is None because the history is empty
+    
