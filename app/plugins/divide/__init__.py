@@ -3,6 +3,8 @@ from app.commands import Command
 
 
 class DivideCommand(Command):
+    command_name = "divide"
+    
     def execute(self, *args):
         if len(args) != 2:
             print("Usage: divide n n (Example: divide 5 2)")
