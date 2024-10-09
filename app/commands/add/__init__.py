@@ -1,7 +1,7 @@
 import sys
 from app.commands import Command
 
-
+# Class that will take two values to add as parameters
 class AddCommand(Command):
     def execute(self, *args):
         if len(args) != 2:

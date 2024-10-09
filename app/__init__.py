@@ -19,7 +19,7 @@ class App:
         self.command_handler.register_command("greet", GreetCommand())
         self.command_handler.register_command("goodbye", GoodbyeCommand())
         self.command_handler.register_command("exit", ExitCommand())
-        self.command_handler.register_command("menu", MenuCommand())
+        self.command_handler.register_command("menu", MenuCommand(self.command_handler))
         self.command_handler.register_command("discord", DiscordCommand())
         self.command_handler.register_command("add", AddCommand())
         self.command_handler.register_command("subtract", SubtractCommand())
@@ -29,4 +29,5 @@ class App:
 
         print("Type 'exit' to exit.")
         while True:  #REPL Read, Evaluate, Print, Loop
-            self.command_handler.execute_command(input(">>> ").strip())
+            user_input = input(">>> ").strip()
+            self.command_handler.execute_command(user_input)
