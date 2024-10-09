@@ -3,6 +3,8 @@ from app.commands import Command
 
 # Class that will take two values to add as parameters
 class AddCommand(Command):
+    command_name = "add"
+
     def execute(self, *args):
         if len(args) != 2:
             print("Usage: add n n (Example: add 9 2)")
